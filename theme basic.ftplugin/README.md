@@ -1,13 +1,5 @@
 # Basic Theme for FoldingText
 
-By [Jamie Kowalski](https://github.com/jamiekowalski)
+Small tweaks for [Jamie Kowalski](https://github.com/jamiekowalski)'s [fantastic theme](https://github.com/jamiekowalski/foldingtext-extra/tree/master/theme%20basic.ftplugin).
 
-Features:
-
-- Seravek (sans-serif font included with OS X 10.9)
-- Custom styling for `@note`, `@aside`, `@im` and other tags
-- Custom fold graphics
-- Custom cursor
-- Retina (and non-retina) graphics
-
-![Theme Screenshot](assets/theme_screenshot.png?raw=true)
+![Theme Screenshot](assets/foldingtext-theme.png?raw=true)

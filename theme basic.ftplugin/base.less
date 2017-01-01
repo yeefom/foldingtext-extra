@@ -10,24 +10,21 @@
  *  Variables
  * ============================================================== */
 
-@monospaceFont: 'TheSansMono Office', Consolas, Menlo, monospace;
-@proportionalFont: Seravek, 'Source Sans Pro'; // Seravek is on OS X 10.9
+@monospaceFont: Inconsolata;
+@proportionalFont: 'Source Sans Pro';
 @fontFamily: @proportionalFont;
-@fontSize: 1.1em;         // FoldingText uses this setting on the body element
-@inkColor: black;
+@fontSize: 1em;         // FoldingText uses this setting on the body element
 @textColor: @inkColor;
 @deskColor: #FEFCF6;
-@paperColor: @deskColor;
-@keywordColor: mix(@textColor, @paperColor, 25%);
+@keywordColor:  mix(@textColor, @paperColor, 25%);
 
-// @lineHeight: 1.25;   // reducing line height interferes with .calc widget style
-@tabSize: 8;
+@tabSize: 4; // 4 spaces tab looks better for normal text. Use spaces when you need 2 spaces tab in code block
 @selectionLeftFillTo: margin;
-@paperTopMargin:    4rem;
-@paperRightMargin:  4rem;
-@paperLeftMargin:   4rem;
+@paperTopMargin:   3px;
+@paperRightMargin:  10px;
+@paperLeftMargin:   10px;
 
-@codeFontSize:   95%;
+@codeFontSize:  97%;
 @codeFontFamily: @monospaceFont;
 @codeColor: black;
 @codeBackgroundColor: mix(transparent, @textColor, 98%);
@@ -37,17 +34,16 @@
 @tagBackgroundColor: @codeBackgroundColor;
 @tagBorder: @codeBorder;
 @tagBorderRadius: @codeBorderRadius;
-
-@interfaceColor: #5A88C7;
-@cursorColor: @interfaceColor;
+@interfaceColor: #868683;
 
 /* ============================================================== *
- *  General 
+ *  General
  * ============================================================== */
 
 body {
     -webkit-font-smoothing: subpixel-antialiased !important;
     text-rendering: optimizeSpeed; // this is set in FoldingText default
+
 }
 
 .CodeMirror {
@@ -55,7 +51,7 @@ body {
   .line-select-position {
       margin-top: -3px;
   }
-  .CodeMirror div.CodeMirror-textDropCursor { // textDropCursor is used when 
+  .CodeMirror div.CodeMirror-textDropCursor { // textDropCursor is used when
                                               // inserting dragged text
       border-color: #333;
       // .line-select-position;
@@ -68,20 +64,28 @@ body {
   }
   .cm-unordered .cm-list-bullet,
   .cm-ordered .cm-lead {
-      color: #5A88C7 !important;
+      color: black !important;
+      font-weight: bold;
+  }
+  span.cm-magiclink.cm-linktarget.cm-text {
+      text-decoration: none;
+      color: #5A88C7;
+      &:hover {
+        color: rgb(0, 122, 255);
+      }
   }
 }
 
 /* ============================================================== *
- *  Headings 
+ *  Headings
  * ============================================================== */
 
 .CodeMirror {
   .cm-heading[cm-level="1"] {
-    font-size: 1.4em;
+    font-size: 1em;
   }
   .cm-heading[cm-level="2"] {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   .cm-heading .cm-lead {
     cursor: pointer;
@@ -89,7 +93,7 @@ body {
 }
 
 /* ============================================================== *
- *  Special item types 
+ *  Special item types
  * ============================================================== */
 
 .CodeMirror {
@@ -137,7 +141,7 @@ body {
     font-family: @codeFontFamily;
     font-size: @codeFontSize;
   }
-  
+
   // inline code
   .cm-code {
     background: @codeBackgroundColor;
@@ -174,7 +178,7 @@ body {
     border: @codeBorder;
     border-left: none;
   }
-    
+
   // fenced code block
   .cm-fencedcodetopboundary .cm-keyword, .cm-fencedcodebottomboundary .cm-keyword {
 	  font-family: @codeFontFamily;
@@ -186,9 +190,9 @@ body {
   .cm-codeblock-background {
     background-color: @codeBackgroundColor;
     border: @codeBorder;
-    border-left-width: 2px;
     border-top: none;
     border-bottom: none;
+    margin-right:10px;
   }
   .cm-fencedcodetopboundary-background,
   .cm-codeblock-start-background {
