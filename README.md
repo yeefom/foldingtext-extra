@@ -1,7 +1,3 @@
-# FoldingText Extensions
+I made some tweaks to the [theme](https://github.com/yeefom/foldingtext-extra/tree/master/theme%20basic.ftplugin) plugin to better fit my use case with [FoldingText](http://www.foldingtext.com).
 
-Extensions, scripts, themes for FoldingText 2 — [Direct](http://www.foldingtext.com), [App Store](https://itunes.apple.com/us/app/foldingtext/id540003654?mt=12).
-
-Each plugin is described in its own README file (inside each plugin folder).
-
-To install a plugin, drag its `.ftplugin` folder into your FoldingText `Plug-Ins` folder. Open this folder from within FoldingText with the menu command `File > Open Application Folder`. The plugin will then be loaded in all subsequently-opened files (close a file and reopen it to load the plugin).
+Please visit Jamie Kowalski's original [repo](https://github.com/jamiekowalski/foldingtext-extra) for other plugins.
